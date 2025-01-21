@@ -6,13 +6,13 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: longhorn-conversion-webhook
+      longhorn.io/conversion-webhook: longhorn-conversion-webhook
   policyTypes:
   - Ingress
   ingress:
   - ports:
     - protocol: TCP
-      port: 9443
+      port: 9501
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -22,10 +22,10 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: longhorn-admission-webhook
+      longhorn.io/admission-webhook: longhorn-admission-webhook
   policyTypes:
   - Ingress
   ingress:
   - ports:
     - protocol: TCP
-      port: 9443
+      port: 9502
