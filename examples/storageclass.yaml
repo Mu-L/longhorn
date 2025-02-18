@@ -7,7 +7,7 @@ allowVolumeExpansion: true
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
 parameters:
-  numberOfReplicas: "2"
+  numberOfReplicas: "3"
   staleReplicaTimeout: "2880"
   fromBackup: ""
   fsType: "ext4"
@@ -21,3 +21,4 @@ parameters:
 #  nodeSelector: "storage,fast"
 #  recurringJobSelector: '[{"name":"snap-group", "isGroup":true},
 #                          {"name":"backup", "isGroup":false}]'
+#  nfsOptions: "soft,timeo=150,retrans=3"
